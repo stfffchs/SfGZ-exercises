@@ -25,11 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "2",
       name: "Shape 2",
       geometry: "M549,348 L603,344 L585,380 Z",
+
     },
   ]
 
   // ========================================
   // Render your shapes here
+
+  const shapes = svg.selectAll("path")
+      .data(data)
+      .enter()
+      .append("path")
+      .attr("d", d => d.geometry)
+
 
   // ...
 

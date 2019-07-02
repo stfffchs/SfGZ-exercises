@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ========================================
   // Render your shape here
 
+  const samplePath = svg.append("path")
+      .attr("d", shapePath)
   // ...
 
   // ========================================
